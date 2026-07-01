@@ -4,6 +4,7 @@
   "description": "API REST do Yearbook Digital — IFNMG Salinas 2026",
   "main": "index.js",
   "scripts": {
+    "build": "prisma generate",
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
