@@ -29,7 +29,7 @@ export async function criarMensagem(req, res, next) {
   try{
     const { texto, imagemUrl, autorId} = req.body;
     if(!texto){
-        return res.status(400).json({ error: "O campo texto é obrigatório" });
+        return res.status(400).json({ erro: "O campo texto é obrigatório" });
     } 
     const mensagemCriada = await prisma.mensagem.create({
         data: {
@@ -57,6 +57,6 @@ export async function deletarMensagem(req, res, next) {
     });
     return res.status(204).end();
   }catch(error){
-    return res.status(404).json({ erro: "mensagem não encontrada" });
+    return res.status(404).json({ erro: "Mensagem não encontrada" });
   }
 }

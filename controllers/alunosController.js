@@ -114,6 +114,6 @@ export async function deletarAluno(req, res, next) {
     });
     return res.status(204).end();
   }catch(erro){
-    return res.status(404).json({ erro: "Aluno não encontrado" });
+    return res.status(404).json({ erro: 'Aluno não encontrado' });
   }
 }
